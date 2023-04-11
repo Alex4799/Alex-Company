@@ -11,6 +11,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EnrollmentController;
 
 /*
@@ -118,6 +119,10 @@ Route::middleware(['auth:sanctum','MessageMiddleware'])->group(function () {
         Route::get('admin/order/lilst/{order_id}',[OrderController::class,'orderList_admin'])->name('admin#orderList');
         Route::get('admin/order/changeStatus/{id}/{status}',[OrderController::class,'changeStatus_admin'])->name('admin#orderChangeStatus');
         Route::get('admin/order/history/delete/{id}',[OrderController::class,'orderDelete_admin'])->name('admin#orderDelete');
+
+        //sales
+        Route::get('admin/sales/dashboard',[DashboardController::class,'saleDashboard_admin'])->name('admin#saleDashboard');
+
     });
 
     // user
@@ -174,6 +179,8 @@ Route::middleware(['auth:sanctum','MessageMiddleware'])->group(function () {
         Route::get('user/message/view/{id}/{user_id}',[MessageController::class,'viewMessage_user'])->name('user#viewMessage');
         Route::get('user/message/delete/{id}',[MessageController::class,'deleteMessage_user'])->name('user#deleteMessage');
 
+        //dashboard
+        Route::get('user/sales/dashboard',[DashboardController::class,'saleDashboard_user'])->name('user#saleDashboard');
     });
 
     // customer

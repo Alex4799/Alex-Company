@@ -134,6 +134,10 @@
                 <a href="{{route('user#messageList')}}">
                     <i class="fa-solid fa-message"></i>Message</a>
             </li>
+            <li class="@if (url()->current()==route('user#saleDashboard')) active @endif">
+                <a href="{{route('user#saleDashboard')}}">
+                    <i class="fa-solid fa-chart-line"></i>Product Dashboard</a>
+            </li>
             <li class="@if (url()->current()==route('user#changePasswordPage')) active @endif">
                 <a href="{{route('user#changePasswordPage')}}">
                     <i class="fa-solid fa-key"></i>Change Password</a>

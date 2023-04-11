@@ -94,7 +94,7 @@
 
                                         <div class="row">
                                             <div class=" offset-7">
-                                                <button type="submit" class=" btn btn-dark"><i class="fa-solid fa-pen-to-square"></i>Create Profile</button>
+                                                <button type="submit" class=" btn btn-dark"><i class="fa-solid fa-pen-to-square"></i>Create Product</button>
                                             </div>
                                         </div>
 

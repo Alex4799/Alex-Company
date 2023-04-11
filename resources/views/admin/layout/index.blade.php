@@ -25,6 +25,8 @@
 
   <link rel="shortcut icon" href="{{asset('image/lucifer.jpg')}}" type="image/x-icon">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.2/apexcharts.min.css" integrity="sha512-FVK9gBi+kZ53Adi2mwTlAXLduxcltMFsyTyoLhJyJcVgbhXb0eQdAGNjoNc7Mt75cH0uc6I1JEdjWc36TUhBuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <script src="https://kit.fontawesome.com/10de2103ef.js" crossorigin="anonymous"></script>
 
 </head>
@@ -101,6 +103,10 @@
                 <a href="{{route('admin#orderHistory')}}">
                     <i class="fa-solid fa-cart-shopping"></i>Order</a>
             </li>
+            <li class="@if (url()->current()==route('admin#saleDashboard')) active @endif">
+                <a href="{{route('admin#saleDashboard')}}">
+                    <i class="fa-solid fa-chart-line"></i>Products Dashboard</a>
+            </li>
             <li class="@if (url()->current()==route('admin#messageList')) active @endif">
                 <a href="{{route('admin#messageList')}}">
                     <i class="fa-solid fa-message"></i>Message</a>
@@ -162,7 +168,7 @@
   <!-- Template Main JS File -->
   <script src="{{asset('layout/assets/js/main.js')}}"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
   @yield('script')
 </body>
